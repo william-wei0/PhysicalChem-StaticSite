@@ -1,0 +1,41 @@
+@reference "../../../styles/global.css";
+
+.lessonPage {
+  @apply p-6;
+}
+
+.lessonPage h1 {
+  @apply font-bold text-4xl m-4;
+}
+
+.lessonPage > .lessonSection:last-of-type {
+  @apply pb-0;
+}
+
+.lessonSection {
+  @apply m-6 p-6 bg-white rounded-2xl text-lg;
+}
+
+.lessonSection .importantEquation {
+  @apply bg-zinc-100 p-2 my-4 border-black border-2 overflow-auto ;
+}
+
+.lessonSection h2 {
+  @apply font-bold text-3xl;
+}
+
+.lessonSection p {
+  @apply mb-4 mt-4;
+}
+
+.lessonSection p.smallNote {
+  @apply text-sm;
+}
+
+.figure img {
+  @apply m-auto;
+}
+
+.figure p {
+  @apply text-center;
+}

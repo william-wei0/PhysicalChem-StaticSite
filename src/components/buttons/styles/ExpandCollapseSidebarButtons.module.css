@@ -1,0 +1,148 @@
+.sidebarButton {
+  --arrow-size: 25px;
+  --arrow-spacing: 10px;
+  --arrow-color: rgb(0, 0, 0);
+  --arrow-color-hover: rgba(160, 160, 160, 0.5);
+  --arrow-thickness: 2px;
+  --padding: 8px;
+  padding: var(--padding);
+  background: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+
+  &:hover .arrow {
+    &.left,
+    &.right {
+      &::before,
+      &::after {
+        border-color: var(--arrow-color-hover);
+      }
+    }
+
+    &.left {
+      &::before,
+      &::after {
+        box-shadow: calc(var(--arrow-size) / -8) calc(var(--arrow-size) / -8) 0
+          var(--arrow-color);
+      }
+    }
+
+    &.right {
+      &::before,
+      &::after {
+        box-shadow: calc(var(--arrow-size) / 8) calc(var(--arrow-size) / -8) 0
+          var(--arrow-color);
+      }
+    }
+  }
+}
+
+.sidebarButton.left::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0px;
+  background: black;
+  transition: width 250ms ease-in-out;
+  top: calc(2 * var(--arrow-size) - var(--padding) + 1px);
+  right: calc(var(--padding) - 1px);
+}
+
+.sidebarButton:hover.left::after {
+  content: "";
+  height: 3px;
+  background: black;
+  width: calc((var(--arrow-size) + var(--arrow-spacing)) + 1px);
+}
+
+.sidebarButton.right::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0px;
+  background: black;
+  transition: width 250ms ease-in-out;
+  top: calc(2 * var(--arrow-size) - var(--padding) + 1px);
+  left: calc(var(--padding) - 1px);
+}
+
+.sidebarButton:hover.right::after {
+  content: "";
+  height: 3px;
+  background: black;
+  width: calc((var(--arrow-size) + var(--arrow-spacing)) + 1px);
+}
+
+.arrow {
+  display: inline-flex;
+  vertical-align: middle;
+  width: calc((var(--arrow-size) + var(--arrow-spacing)));
+  height: calc(var(--arrow-size) * 1.5);
+  border-bottom: gray solid 2px;
+  overflow: hidden;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    box-sizing: border-box;
+    display: inline-block;
+    width: calc(var(--arrow-size) * 0.7071);
+    height: calc(var(--arrow-size) * 0.7071);
+    border-top: calc(var(--arrow-thickness)) solid var(--arrow-color);
+    transition: all 150ms ease-in-out;
+  }
+
+  &.left {
+    &::before,
+    &::after {
+      border-left: calc(var(--arrow-thickness)) solid var(--arrow-color);
+      transform-origin: top left;
+      rotate: -45deg;
+    }
+
+    &::before {
+      left: calc((var(--arrow-size) + var(--arrow-spacing)) / 8);
+    }
+
+    &::after {
+      left: calc(
+        (var(--arrow-size) + var(--arrow-spacing)) / 8 + var(--arrow-spacing)
+      );
+    }
+
+    &:hover::before,
+    &:hover::after {
+      box-shadow: calc(-1 * var(--arrow-thickness))
+        calc(-1 * var(--arrow-thickness)) 0 var(--arrow-color);
+    }
+  }
+
+  &.right {
+    &::before,
+    &::after {
+      border-right: calc(var(--arrow-thickness)) solid var(--arrow-color);
+      transform-origin: top right;
+      rotate: 45deg;
+    }
+
+    &::before {
+      right: calc((var(--arrow-size) + var(--arrow-spacing)) / 8);
+    }
+
+    &::after {
+      right: calc(
+        (var(--arrow-size) + var(--arrow-spacing)) / 8 + var(--arrow-spacing)
+      );
+    }
+
+    &:hover::before,
+    &:hover::after {
+      box-shadow: calc(var(--arrow-thickness)) calc(var(--arrow-thickness)) 0
+        var(--arrow-color);
+    }
+  }
+}

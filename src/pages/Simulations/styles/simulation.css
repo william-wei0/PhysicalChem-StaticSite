@@ -1,0 +1,56 @@
+@reference "../../../styles/global.css";
+
+.simulationCanvasLayout {
+  @apply flex justify-center-safe;
+}
+
+.threeSimulationContainer {
+  height: 840px;
+  @apply flex border-2 border-black relative overflow-x-hidden;
+}
+
+.threeSimulationContainerFullscreen {
+  height: 100vh;
+  @apply flex border-2 border-black relative overflow-x-hidden;
+}
+
+.threeCanvas {
+  @apply flex-1 w-full z-0;
+}
+
+.canvasContainer {
+  @apply flex relative overflow-x-hidden;
+}
+
+.canvasScrollPane {
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.canvasContainer canvas {
+  display: block;
+}
+
+.scrollContainer {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.scrollContainer::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scrollContainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollContainer::-webkit-scrollbar-thumb {
+  background: #71717a;
+  border-radius: 2px;
+}
+
+.scrollContainer::-webkit-scrollbar-thumb:hover {
+  background: #a1a1aa;
+  cursor: pointer;
+}

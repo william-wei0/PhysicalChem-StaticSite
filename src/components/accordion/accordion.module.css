@@ -1,0 +1,5 @@
+@reference "@/styles/global.css";
+
+.accordionContent{
+  @apply grid transition-all duration-200 ease-in-out
+}

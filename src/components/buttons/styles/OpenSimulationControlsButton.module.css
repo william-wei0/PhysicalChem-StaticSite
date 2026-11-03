@@ -1,0 +1,66 @@
+.OpenSimulationControlsButton {
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  border: black solid 1px;
+  transition: all 0.5s ease-in-out;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  background: #eeeeee;
+  color: #000000;
+}
+
+.OpenSimulationControlsButton:hover {
+  box-shadow: 0 0 20px 0px #2e2e2e3a;
+}
+
+.OpenSimulationControlsButton .OpenSimulationControlsButtonIcon {
+  position: absolute;
+  height: 40px;
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+.OpenSimulationControlsButton .OpenSimulationControlsButtonText {
+  transform: translateX(46px) translateY(-1px);
+  font-weight: 300;
+}
+
+.OpenSimulationControlsButton:hover .OpenSimulationControlsButtonIcon {
+  width: 152px;
+  
+}
+.OpenSimulationControlsButton:hover .OpenSimulationControlsButtonIcon{
+  animation: spin 2s linear infinite;
+}
+
+
+.OpenSimulationControlsButton:hover .OpenSimulationControlsButtonText {
+  
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.OpenSimulationControlsButton:focus {
+  outline: none;
+}
+
+.OpenSimulationControlsButton:active .OpenSimulationControlsButtonIcon {
+  transform: scale(0.85);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

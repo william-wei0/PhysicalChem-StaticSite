@@ -1,0 +1,17 @@
+@reference "../../styles/global.css";
+
+.sidebarAccordionTrigger {
+  @apply relative w-full font-semibold text-left border-b-2 border-zinc-500 pl-4 pt-5 pb-1 bg-zinc-50 hover:bg-slate-200;
+}
+
+
+.linkItem {
+  @apply bg-zinc-200 hover:bg-slate-300
+         cursor-pointer transition-colors duration-150 border-l-3 
+         border-transparent hover:border-zinc-500 border-b-black border-b
+         text-left relative font-medium;
+}
+
+.linkItem a {
+  @apply block w-full pl-6 pr-4 pt-4 pb-1.5;
+}

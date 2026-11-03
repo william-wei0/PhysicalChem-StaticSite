@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <radialGradient id="protonGradient" cx="38%" cy="32%" r="60%">
+      <stop offset="0%" stop-color="#fca5a5" />
+      <stop offset="40%" stop-color="#ef4444" />
+      <stop offset="100%" stop-color="#7f1d1d" />
+    </radialGradient>
+    <radialGradient id="electronGradient" gradientUnits="userSpaceOnUse" cx="83" cy="43" r="14">
+      <stop offset="0%" stop-color="#93c5fd" />
+      <stop offset="40%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1e3a8a" />
+    </radialGradient>
+  </defs>
+
+  <ellipse cx="50" cy="50" rx="42" ry="42" stroke="#000000" stroke-width="2.5" />
+  <circle cx="50" cy="50" r="18" fill="url(#protonGradient)" />
+
+  <g>
+    <circle cx="80" cy="20" r="12" fill="url(#electronGradient)">
+    </circle>
+  </g>
+</svg>
